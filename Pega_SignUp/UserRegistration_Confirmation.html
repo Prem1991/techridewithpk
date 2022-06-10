@@ -1,0 +1,58 @@
+<%
+tools.putParamValue("Message",tools.findPage("pyNewOperator").getString("pyStatusValue"));
+%>
+<html lang='en-us'>
+<head>
+            <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="application-name" content="<pega:lookup property="pxRequestor.pyCaption" value="Login Page" />">
+            <meta name="description" content="<pega:lookup property="pxRequestor.pyCaption" value="Login Page" />">
+            <pega:when test='pyIsMobile'>
+                <meta name="apple-mobile-web-app-capable" content="yes">
+                <meta name="apple-touch-fullscreen" content="yes">
+                <meta name="format-detection" content="telephone=no">
+                <meta name="mobile-web-app-capable" content="yes">
+                <meta name="apple-mobile-web-app-status-bar-style" content="black">
+            </pega:when>
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <pega:include name="pyImageTags" inline="true" />
+            <link rel="icon" type="image/png" sizes="32x32" href="images/pzPegaIcon32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="images/pzPegaIcon16.png">
+            <link rel="shortcut icon" href="images/pzPegaIcon.ico">
+            <title>
+                <pega:lookup property="pxRequestor.pyCaption" value="Login Page" />
+            </title>
+            <link rel='stylesheet' type='text/css' href='webwb/py-login-screen.css' />
+            
+            <
+        </head>
+  <body>
+     <form name="main" method="post" action="<pega:reference name="pxThread.pxReqURI" mode="normal" />" target="_top" novalidate="novalidate" >
+    <div class="content-container">
+    <div class = "content-container-registration">
+    <div id="login">
+        <div id="errorDiv">
+            
+        </div>
+        
+        
+
+
+        <div id="credentials">
+            <div id="credentialsForm">
+                <span><p:r n="param.Message" /></span>
+            </div>
+            <div id="authorizationCodeForm" style="display:none">
+            </div>
+            
+                <div id="submit_row">
+                    <button id="sub" class="loginButton" type="submit">
+                        <span class="loginButtonText"> Return to Login </span>
+                    </button>
+                </div>
+                
+    </div>
+</div>
+    </div>
+      </body>
+    </html>
